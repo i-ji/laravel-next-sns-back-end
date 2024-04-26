@@ -22,7 +22,7 @@ class PostController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'body' => 'required'
+            'body' => 'required|max:250'
         ]);
 
         $post = new Post();
